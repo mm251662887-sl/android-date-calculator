@@ -108,18 +108,18 @@ class DateDiffFragment : Fragment() {
 
     /** 更新界面日期显示 */
     private fun updateDateDisplay() {
-        binding.startDateInput.text = formatDate(startCalendar)
-        binding.endDateInput.text = formatDate(endCalendar)
+        binding.startDateInput.setText(formatDate(startCalendar))
+        binding.endDateInput.setText(formatDate(endCalendar))
         if (hasStartTime) updateTimeDisplay()
     }
 
     /** 更新时间显示 */
     private fun updateTimeDisplay() {
         if (hasStartTime) {
-            binding.startTimeInput.text = formatTime(startCalendar)
+            binding.startTimeInput.setText(formatTime(startCalendar))
         }
         if (hasEndTime) {
-            binding.endTimeInput.text = formatTime(endCalendar)
+            binding.endTimeInput.setText(formatTime(endCalendar))
         }
     }
 

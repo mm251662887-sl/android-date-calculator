@@ -137,10 +137,10 @@ class DateCalcFragment : Fragment() {
 
     /** 更新基准日期显示 */
     private fun updateDateDisplay() {
-        binding.baseDateInput.text = String.format("%d年%02d月%02d日",
+        binding.baseDateInput.setText(String.format("%d年%02d月%02d日",
             baseCalendar.get(Calendar.YEAR),
             baseCalendar.get(Calendar.MONTH) + 1,
-            baseCalendar.get(Calendar.DAY_OF_MONTH))
+            baseCalendar.get(Calendar.DAY_OF_MONTH)))
     }
 
     override fun onDestroyView() {
