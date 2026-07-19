@@ -1,6 +1,8 @@
 // 应用级构建配置 - 日期时间计算器
-apply(plugin = "com.android.application")
-apply(plugin = "kotlin-android")
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
 
 android {
     namespace = "com.datecalculator.app"
@@ -11,7 +13,7 @@ android {
         minSdk = 26
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
     }
 
     buildTypes {
