@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 涟漪效果按钮 - Material 涟漪遮罩 -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/button_ripple">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="28dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/gradient_start"
+                android:centerColor="@color/gradient_center"
+                android:endColor="@color/gradient_end"
+                android:angle="135" />
+            <corners android:radius="28dp" />
+        </shape>
+    </item>
+</ripple>

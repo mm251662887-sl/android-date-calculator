@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Material Design 3 深色主题 - 紫色/青色渐变配色 -->
+<resources>
+    <!-- 主应用主题 -->
+    <style name="Theme.DateCalculator" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryContainer">@color/purple_700</item>
+        <item name="colorSecondary">@color/cyan_200</item>
+        <item name="colorSecondaryContainer">@color/cyan_700</item>
+        <item name="colorTertiary">@color/gradient_end</item>
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorSurfaceVariant">@color/surface_variant_dark</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/surface_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- 标题文字样式 -->
+    <style name="TextAppearance.Title" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 副标题样式 -->
+    <style name="TextAppearance.Subtitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <!-- 结果数字样式 -->
+    <style name="TextAppearance.ResultNumber" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textColor">@color/cyan_200</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 结果标签样式 -->
+    <style name="TextAppearance.ResultLabel" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <!-- 渐变按钮样式 -->
+    <style name="Widget.GradientButton" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">14dp</item>
+        <item name="cornerRadius">28dp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <!-- 快捷按钮样式 -->
+    <style name="Widget.ShortcutButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/cyan_200</item>
+        <item name="android:textSize">12sp</item>
+        <item name="strokeColor">@color/purple_500</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+    <!-- 卡片样式 -->
+    <style name="Widget.AppCard" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/card_dark</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- 输入框样式 -->
+    <style name="Widget.AppTextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/purple_500</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextColor">@color/cyan_200</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+    </style>
+
+    <!-- TabLayout 样式 -->
+    <style name="Widget.AppTabLayout" parent="Widget.Material3.TabLayout">
+        <item name="tabIndicatorColor">@color/cyan_500</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabTextColor">@color/text_secondary</item>
+        <item name="tabSelectedTextColor">@color/cyan_200</item>
+        <item name="tabRippleColor">@color/button_ripple</item>
+    </style>
+</resources>

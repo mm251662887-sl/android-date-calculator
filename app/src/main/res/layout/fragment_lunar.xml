@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 农历转换 - 界面布局 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 转换方向切换 -->
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleDirection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSolarToLunar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/solar_to_lunar"
+                android:textColor="@color/text_secondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLunarToSolar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lunar_to_solar"
+                android:textColor="@color/text_secondary" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!-- 公历转农历 - 输入区域 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/solarInputCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_dark"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/inputTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="输入公历日期"
+                    android:textColor="@color/cyan_200"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- 年份 -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/yearInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="年份 (1900-2100)"
+                    app:boxStrokeColor="@color/purple_500"
+                    app:hintTextColor="@color/cyan_200"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/yearInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- 月份和日期并排 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/monthInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="月份"
+                        app:boxStrokeColor="@color/purple_500"
+                        app:hintTextColor="@color/cyan_200"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_marginEnd="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/monthInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColor="@color/text_primary" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dayInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="日期"
+                        app:boxStrokeColor="@color/purple_500"
+                        app:hintTextColor="@color/cyan_200"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dayInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColor="@color/text_primary" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- 闰月选项（仅农历转公历时显示） -->
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/leapMonthCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/is_leap_month"
+                    android:textColor="@color/text_secondary"
+                    android:visibility="gone"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 转换按钮 -->
+        <Button
+            android:id="@+id/btnConvertLunar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="转 换"
+            android:background="@drawable/ripple_button"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 结果卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/lunarResultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_dark"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- 主要结果 -->
+                <TextView
+                    android:id="@+id/lunarDateResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.ResultNumber"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- 分割线 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1AFFFFFF"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- 详细信息网格 -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="4">
+
+                    <!-- 干支年 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="干支纪年"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/ganzhiText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/cyan_200"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- 生肖 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="生肖"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/zodiacText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/cyan_200"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- 农历年 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="农历年"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/lunarYearText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/cyan_200"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- 是否闰月 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="闰月"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:id="@+id/leapMonthText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/cyan_200"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:layout_columnWeight="1" />
+                </GridLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

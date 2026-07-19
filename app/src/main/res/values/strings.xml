@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 字符串资源 -->
+<resources>
+    <string name="app_name">日期计算器</string>
+
+    <!-- 标签页标题 -->
+    <string name="tab_date_diff">日期差值</string>
+    <string name="tab_date_calc">日期推算</string>
+    <string name="tab_time_conv">时间换算</string>
+    <string name="tab_lunar">农历转换</string>
+
+    <!-- 日期差值计算 -->
+    <string name="start_date">开始日期</string>
+    <string name="end_date">结束日期</string>
+    <string name="include_time">包含时间</string>
+    <string name="calculate">计 算</string>
+    <string name="result_days">天</string>
+    <string name="result_hours">小时</string>
+    <string name="result_minutes">分钟</string>
+    <string name="result_seconds">秒</string>
+    <string name="result_weeks">周</string>
+    <string name="result_months">月</string>
+    <string name="result_years">年</string>
+
+    <!-- 日期推算 -->
+    <string name="base_date">基准日期</string>
+    <string name="days_to_add">天数</string>
+    <string name="add">加</string>
+    <string name="subtract">减</string>
+    <string name="result_date">目标日期</string>
+
+    <!-- 时间换算 -->
+    <string name="time_value">数值</string>
+    <string name="from_unit">原单位</string>
+    <string name="to_unit">目标单位</string>
+    <string name="convert">转 换</string>
+    <string name="unit_second">秒</string>
+    <string name="unit_minute">分钟</string>
+    <string name="unit_hour">小时</string>
+    <string name="unit_day">天</string>
+    <string name="unit_week">周</string>
+    <string name="unit_month">月</string>
+    <string name="unit_year">年</string>
+
+    <!-- 农历转换 -->
+    <string name="solar_to_lunar">公历转农历</string>
+    <string name="lunar_to_solar">农历转公历</string>
+    <string name="lunar_year">农历年</string>
+    <string name="lunar_month">农历月</string>
+    <string name="lunar_day">农历日</string>
+    <string name="is_leap_month">闰月</string>
+    <string name="solar_year">公历年</string>
+    <string name="solar_month">公历月</string>
+    <string name="solar_day">公历日</string>
+    <string name="ganzhi">干支</string>
+    <string name="zodiac">生肖</string>
+    <string name="lunar_date_str">农历日期</string>
+
+    <!-- 快捷操作 -->
+    <string name="shortcut_title">快捷操作</string>
+    <string name="shortcut_today_to_year_end">今天到年底</string>
+    <string name="shortcut_next_100_days">未来100天</string>
+    <string name="shortcut_next_year">未来一年</string>
+    <string name="shortcut_next_month">未来30天</string>
+    <string name="shortcut_this_week">本周剩余</string>
+    <string name="shortcut_1000_days">未来1000天</string>
+
+    <!-- 通用 -->
+    <string name="select_date">选择日期</string>
+    <string name="select_time">选择时间</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="result_label">计算结果</string>
+    <string name="please_input">请输入</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 应用图标前景 - 日历/时钟符号 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 日历外框 -->
+    <path
+        android:pathData="M30,32 L78,32 Q82,32 82,36 L82,78 Q82,82 78,82 L30,82 Q26,82 26,78 L26,36 Q26,32 30,32 Z"
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000" />
+
+    <!-- 日历顶部横条 -->
+    <path
+        android:pathData="M26,42 L82,42"
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="2" />
+
+    <!-- 日历挂钩左 -->
+    <path
+        android:pathData="M40,28 L40,36"
+        android:strokeColor="#7C4DFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+
+    <!-- 日历挂钩右 -->
+    <path
+        android:pathData="M68,28 L68,36"
+        android:strokeColor="#7C4DFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+
+    <!-- 日期数字区域 - 小方块网格 -->
+    <path
+        android:pathData="M34,50 L40,50 L40,56 L34,56 Z"
+        android:fillColor="#7C4DFF" />
+    <path
+        android:pathData="M44,50 L50,50 L50,56 L44,56 Z"
+        android:fillColor="#536DFE" />
+    <path
+        android:pathData="M54,50 L60,50 L60,56 L54,56 Z"
+        android:fillColor="#00E5FF" />
+    <path
+        android:pathData="M64,50 L70,50 L70,56 L64,56 Z"
+        android:fillColor="#536DFE" />
+
+    <path
+        android:pathData="M34,60 L40,60 L40,66 L34,66 Z"
+        android:fillColor="#536DFE" />
+    <path
+        android:pathData="M44,60 L50,60 L50,66 L44,66 Z"
+        android:fillColor="#00E5FF" />
+    <path
+        android:pathData="M54,60 L60,60 L60,66 L54,66 Z"
+        android:fillColor="#7C4DFF" />
+    <path
+        android:pathData="M64,60 L70,60 L70,66 L64,66 Z"
+        android:fillColor="#00E5FF" />
+
+    <path
+        android:pathData="M34,70 L40,70 L40,76 L34,76 Z"
+        android:fillColor="#00E5FF" />
+    <path
+        android:pathData="M44,70 L50,70 L50,76 L44,76 Z"
+        android:fillColor="#7C4DFF" />
+    <path
+        android:pathData="M54,70 L60,70 L60,76 L54,76 Z"
+        android:fillColor="#536DFE" />
+</vector>
